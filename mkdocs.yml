@@ -1,0 +1,68 @@
+site_name: Treinamento Mkdocs
+
+repo_name: 'Treinamento Mkdocs'
+repo_url: https://github.com/raqueleucaria/treinamento-mkdocs/
+site_url: https://raqueleucaria.github.io/treinamento-mkdocs/
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+
+  icon:
+    repo: fontawesome/brands/github
+
+  features:
+    - toc.integrate
+    - toc.follow
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+    - navigation.instant
+    - navigation.top
+
+  hide: 
+    - 
+
+  extra:
+    social:
+      - icon: fontawesome/brands/mastodon
+        link: https://fosstodon.org/@squidfunk
+
+  plugins: 
+    - search:
+        lang: pt-BR
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: dark blue
+      accent: amber
+      toggle:
+        icon: material/lightbulb
+        name: Modo Claro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: yellow
+      toggle:
+        icon: material/lightbulb-outline
+        name: Modo Escuro
+
+  markdown_extensions:
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - attr_list
+    - md_in_html
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Planejamento:
+    - Metodologia: planejamento/metodologia.md
+    - Tecnologias: planejamento/tecnologia.md
+    - Escopo: planejamento/escopo.md
+    - Heatmap: planejamento/heatmap.md
